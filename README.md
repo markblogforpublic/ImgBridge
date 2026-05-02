@@ -131,6 +131,19 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 
 图片素材来源：https://miles-dml.org/ja/milet/galleryDetail/gallery_10#gallery-8
 
+### 同时我也展示网页上此时什么情况 
+
+这是配置：
+<img width="756" height="823" alt="image" src="https://github.com/user-attachments/assets/30fc4218-f98e-4eb3-94d6-7554fe95bb31" />
+
+这是输出：
+<img width="1177" height="1210" alt="image" src="https://github.com/user-attachments/assets/a00a6dd0-6adb-4931-bf93-c4ee51a82872" />
+<img width="1080" height="546" alt="image" src="https://github.com/user-attachments/assets/62335b54-a0c8-49b8-8710-3231643640b7" />
+
+
+
+
+
 ## License / 许可证
 
 MIT
