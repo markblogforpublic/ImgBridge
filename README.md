@@ -124,7 +124,7 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 将 `SKILL.md` 放入项目的 `.claude/skills/` 目录即可使用 `/image-recognize` 命令。
 
 ---
-## 示例：
+## 示例：Claude Code Desktop 接入Deepseek 截止至2026.5.2并不支持多模态，所以通过千问实现图片理解并将结果自动同步在Claude Code Desktop
 <img width="1211" height="945" alt="image" src="https://github.com/user-attachments/assets/b4ddee3d-6c9b-4cc6-b4e8-2825b0da62d6" />
 <img width="1199" height="827" alt="image" src="https://github.com/user-attachments/assets/8b130dd8-39ba-403c-a33f-74bcf01326de" />
 <img width="1148" height="761" alt="image" src="https://github.com/user-attachments/assets/693e212d-1607-4a52-9ac1-d68015dfcef9" />
