@@ -185,3 +185,10 @@ This project is an independent local tool that provides a technical interface fo
 - **User responsibility** — Users are responsible for ensuring their use of this tool and any connected APIs complies with applicable laws and terms of service.
   **用户责任** — 用户需确保使用本工具及所连接的 API 符合相关法律和服务条款。
 
+## Example Image Notice / 示例图片说明
+
+The example image used in this project's demonstration is sourced from a public platform and is used solely for the purpose of showcasing the tool's functionality. We believe this constitutes fair use. If you are the rights holder and believe this infringes upon your rights, please contact us to have it removed immediately.
+
+本项目演示中使用的示例图片来源于公共平台，仅用于展示工具功能。我们坚信此举符合合理使用原则。如您是版权持有人并认为构成侵权，请联系我们立即删除。
+
+
