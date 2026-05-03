@@ -137,6 +137,30 @@ pip install requests
 
 ---
 
+## Example / 示例演示
+
+Below is a real recognition result from **ImgBridge**. The image used is a portrait from a public platform, used solely for demonstration.
+
+以下为 ImgBridge 的实测识别结果。示例图片来源于公共平台，仅用于展示：
+
+**Input / 输入:** `test.jpg` — 年轻女性自拍特写
+
+**Output / 输出 (qwen3.6-plus):**
+
+> 这是一张年轻女性的自拍特写照片，画面充满了梦幻和精致的氛围，看起来像是舞台妆造或Cosplay的定妆照。
+>
+> **人物**：皮肤白皙的年轻女性，面带微笑，右手比"V"字手势在右眼下。妆容精致，眼头贴有水钻亮片。
+>
+> **服饰**：头戴水晶珠链发箍，额前横跨细链垂挂珠子（精灵/人鱼风）。佩戴珍珠贝壳项链。服装右肩深蓝紫渐变薄纱镶亮片（星空感），左肩白色蕾丝密集珍珠串珠（花朵簇拥立体装饰）。
+>
+> **背景**：棕褐色斑驳墙面，光线柔和。
+
+This demonstrates how visual content is converted into detailed text that any text-only model can understand.
+
+这展示了图片内容如何被转为详细文字描述，供任何纯文本模型理解。
+
+---
+
 ## Environment Guide / 环境配置
 
 ### Windows (start.bat)
