@@ -253,3 +253,37 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 ## License / 许可证
 
 MIT
+
+## Disclaimer / 免责声明
+This software is provided "as is", without warranty of any kind, express or implied. The authors assume no responsibility for any damages or losses arising from the use of this software.
+本软件按"原样"提供，不附带任何明示或暗示的保证。作者不对因使用本软件而产生的任何损害或损失承担责任。
+Users are solely responsible for:
+
+Compliance with the terms of service of any third-party API they connect to
+The content they upload and process through this tool
+Ensuring they have the right to analyze any images they submit
+Protecting their own API keys and configuration data
+
+使用者需自行承担以下责任：
+
+遵守所接入的第三方 API 的服务条款
+上传和处理的内容的合规性
+确保拥有所提交图片的分析权限
+保护自己的 API Key 和配置信息
+
+## Non-Infringement Statement / 不侵权声明
+This project is an independent local tool that provides a technical interface for calling visual AI APIs. It does not:
+本项目是一个独立的本地工具，提供调用视觉 AI API 的技术接口，不涉及以下行为：
+
+Not a substitute — This tool does not replace, replicate, or distribute any third-party model. It simply provides a local interface to call APIs that users configure themselves.
+非替代品 — 本工具不替代、不复制、不分发任何第三方模型，仅提供本地界面让用户调用自己配置的 API。
+No bundled models — No model weights, model binaries, or proprietary algorithms are included in this repository. All AI processing is done remotely through the user's own API configuration.
+不包含模型 — 本仓库不包含任何模型权重、模型二进制文件或专有算法，所有 AI 处理均通过用户自配的 API 远程完成。
+No data collection — This tool does not collect, store, or transmit any user data to any third party beyond the API endpoints explicitly configured by the user.
+不收集数据 — 本工具不收集、不存储、不向任何第三方传输用户数据（除用户明确配置的 API 端点外）。
+User responsibility — Users are responsible for ensuring their use of this tool and any connected APIs complies with applicable laws and terms of service.
+用户责任 — 用户需确保使用本工具及所连接的 API 符合相关法律和服务条款。
+
+## Example Image Notice / 示例图片不侵权声明
+The example image of the female portrait used in this project's demonstration is sourced from a public figure's publicly available gallery and is used solely for the purpose of showcasing the tool's functionality. We believe this constitutes fair use. If you are the rights holder and believe this infringes upon your rights, please contact us to have it removed immediately.
+本项目演示中使用的女性肖像示例图片来源于公众人物的公开图库，仅用于展示工具功能。我们坚信此举符合合理使用原则。如您是版权持有人并认为构成侵权，请联系我们立即删除。
