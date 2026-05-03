@@ -237,7 +237,12 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 ---
 <img width="756" height="823" alt="屏幕截图 2026-05-02 173835" src="https://github.com/user-attachments/assets/28c8cbd0-2ed4-429c-8ad0-7419e88d3453" />
 <img width="1177" height="1210" alt="屏幕截图 2026-05-02 173645" src="https://github.com/user-attachments/assets/25d58212-b1b6-42e7-88df-d50b549c7668" />
+## 示例：  ② MCP Server (Standard) / 标准 MCP 🔌
 
+<img width="1136" height="883" alt="屏幕截图 2026-05-03 224824" src="https://github.com/user-attachments/assets/9d08513b-87ad-499b-9cf9-0293a095412a" />
+## 示例：   ③ MCP+ 🚀
+<img width="1216" height="968" alt="屏幕截图 2026-05-03 230709" src="https://github.com/user-attachments/assets/c6fa423c-81ff-4562-8554-c2f20652e814" />
+---
 
 图片素材来源：https://miles-dml.org/ja/milet/galleryDetail/gallery_10#gallery-8
 
