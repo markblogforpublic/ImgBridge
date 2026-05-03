@@ -225,7 +225,7 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 ## 示例： ① Web Tool / 网页工具 🖥️
 <img width="1211" height="945" alt="image" src="https://github.com/user-attachments/assets/b4ddee3d-6c9b-4cc6-b4e8-2825b0da62d6" />
 <img width="1199" height="827" alt="image" src="https://github.com/user-attachments/assets/8b130dd8-39ba-403c-a33f-74bcf01326de" />
-<img width="1148" height="761" alt="屏幕截图 2026-05-02 173043" src="https://github.com/user-attachments/assets/35b17a1d-1d6b-4956-a78e-30c4bfdd0727" />
+<img width="1148" height="761" alt="image" src="https://github.com/user-attachments/assets/35b17a1d-1d6b-4956-a78e-30c4bfdd0727" />
 
 图片素材来源：https://miles-dml.org/ja/milet/galleryDetail/gallery_10#gallery-8
 
