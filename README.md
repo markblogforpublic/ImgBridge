@@ -127,13 +127,13 @@ claude --mcp "python vision_mcp_server.py"
 
 ### ③ MCP+ 🚀
 
-**Enhanced mode — upload images directly in chat, no browser needed.**
+**Enhanced mode for Claude Code CLI only — pop up a file picker dialog, no path typing needed.**
 
-增强模式 — 直接在对话中上传图片，无需开浏览器。
+增强模式（仅 **Claude Code CLI**，Cowork 模式不支持）— 弹出文件选择框，无需输入路径。
 
-MCP+ runs as a background service. When you upload an image in chat, Claude detects it and delegates recognition to the MCP server automatically.
+MCP+ adds the `analyze_image_dialog` tool, which opens a native Windows file picker dialog when called. Select the image with a click — no browser, no manual path input.
 
-MCP+ 以后台服务运行，你在对话中上传图片，Claude 自动调用 MCP 识别。
+MCP+ 增加了 `analyze_image_dialog` 工具，调用时弹出 Windows 文件选择框，点选图片即可识别。
 
 **CLAUDE.md config / 配置方式:**
 ```yaml
@@ -142,6 +142,12 @@ mcpServers:
     command: python
     args: ["D:\\ImgBridge\\vision_mcp_server.py"]
 ```
+
+**Extra tool in MCP+ / MCP+ 专属工具:**
+
+| Tool / 工具 | Description / 说明 |
+|-------------|-------------------|
+| `analyze_image_dialog` | 🆕 **Open file picker dialog (CLI only)** / 弹出文件选择框（仅 CLI） |
 
 ---
 
@@ -167,7 +173,7 @@ Settings → MCP Servers → Add:
 Restart → done
 ```
 
-### Claude Code CLI (MCP)
+### Claude Code CLI (MCP / MCP+)
 ```bash
 claude --mcp "python D:\ImgBridge\vision_mcp_server.py"
 ```
@@ -178,9 +184,10 @@ claude --mcp "python D:\ImgBridge\vision_mcp_server.py"
 
 | Scenario / 场景 | Best method / 最佳方式 |
 |----------------|----------------------|
-| Quick single image / 快速单张 | MCP / MCP+ |
+| Quick single image / 快速单张 | MCP / MCP+ (CLI) |
 | Batch many images / 批量多张 | Web Tool (drag & drop) |
-| No browser / 不想开浏览器 | MCP+ (chat upload) |
+| No browser / 不想开浏览器 | MCP+ file dialog (CLI only) |
+| Cowork mode / Cowork 模式 | Web Tool or direct file path |
 | First time setup / 首次配置 | Web Tool (⚙️ UI) |
 | Code integration / 代码集成 | MCP (CLI automation) |
 

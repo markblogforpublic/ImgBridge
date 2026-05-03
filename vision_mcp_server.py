@@ -20,7 +20,6 @@ import json
 import threading
 import base64
 import http.server
-import cgi
 import re
 import time
 from pathlib import Path
@@ -70,7 +69,16 @@ def analyze_image(image_path: str, prompt: str = None) -> str:
 
     print(f"  🔍 识别: {img_file.name} ({size_mb:.1f}MB)", file=sys.stderr)
 
-    result = api_config.call_vision_api(str(img_file), prompt, config=CONFIG)
+    # 详细诊断信息
+    print(f"  [debug] CONFIG keys: {list(CONFIG.keys())}", file=sys.stderr)
+    print(f"  [debug] model: {CONFIG.get('model','?')}", file=sys.stderr)
+    print(f"  [debug] endpoint: {CONFIG.get('api_endpoint','?')[:60]}...", file=sys.stderr)
+
+    try:
+        result = api_config.call_vision_api(str(img_file), prompt, config=CONFIG)
+    except Exception as e:
+        import traceback
+        result = f"❌ 代码异常: {e}\n{traceback.format_exc()}"
 
     print(f"  ✅ 识别完成", file=sys.stderr)
     return result
@@ -165,17 +173,43 @@ finally{b.disabled=false;b.textContent='🚀 上传'}}
         self.end_headers()
         self.wfile.write(html.encode())
 
+    def _parse_multipart(self):
+        """手动解析 multipart/form-data，兼容 Python 3.13+（cgi 已移除）"""
+        ct = self.headers.get('Content-Type', '')
+        m = re.search(r'boundary=([^;\s]+)', ct)
+        if not m: return {}
+        boundary = m.group(1).encode()
+        length = int(self.headers.get('Content-Length', 0))
+        body = self.rfile.read(length)
+        result = {}
+        for part in body.split(b'--' + boundary):
+            if part.strip() in (b'', b'--', b'\r\n--'): continue
+            header_end = part.find(b'\r\n\r\n')
+            if header_end == -1: continue
+            headers_raw = part[:header_end].decode('utf-8', errors='replace')
+            content = part[header_end + 4:]
+            if content.endswith(b'\r\n'): content = content[:-2]
+            name_m = re.search(r'name="([^"]*)"', headers_raw)
+            fn_m = re.search(r'filename="([^"]*)"', headers_raw)
+            name = name_m.group(1) if name_m else None
+            if fn_m and name:
+                result[name] = {'filename': fn_m.group(1), 'data': content}
+            elif name:
+                result[name] = content.decode('utf-8', errors='replace')
+        return result
+
     def do_POST(self):
         try:
-            form = cgi.FieldStorage(fp=self.rfile, headers=self.headers,
-                environ={'REQUEST_METHOD':'POST','CONTENT_TYPE':self.headers.get('Content-Type','')})
-            item = form['image']
-            fn = item.filename or 'uploaded.png'
-            data = item.file.read()
+            form = self._parse_multipart()
+            item = form.get('image')
+            if not item:
+                self._r(False, error='未找到图片文件'); return
+            fn = item['filename'] or 'uploaded.png'
+            data = item['data']
             ext = os.path.splitext(fn)[1].lower()
             sup = {'.jpg','.jpeg','.jfif','.jpe','.png','.webp','.gif','.bmp'}
             if ext not in sup:
-                self._r(False,error=f'不支持格式'); return
+                self._r(False,error='不支持格式'); return
             dst = SAVE_DIR / fn
             c = 1
             while dst.exists():
@@ -235,6 +269,46 @@ def analyze_uploaded_image(timeout_seconds: int = 60) -> str:
 
     server.shutdown()
     return result
+
+
+@mcp.tool(
+    name="analyze_image_dialog",
+    description="打开 Windows 文件选择对话框，用户选图后自动识别。Cowork 模式下传图的最佳方式。"
+)
+def analyze_image_dialog() -> str:
+    """
+    弹出文件选择对话框，用户选择图片后自动识别。
+    无需手动输入路径，Cowork 模式下最方便。
+    """
+    try:
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
+        root.attributes('-topmost', True)
+        path = filedialog.askopenfilename(
+            title="选择要识别的图片",
+            filetypes=[("图片文件", "*.jpg *.jpeg *.png *.webp *.gif *.bmp"),
+                       ("所有文件", "*.*")]
+        )
+        root.destroy()
+
+        if not path:
+            return "❌ 已取消选择"
+
+        from pathlib import Path
+        p = Path(path)
+        if not p.exists():
+            return f"❌ 找不到文件: {path}"
+
+        print(f"  📸 用户选择了: {p.name}", file=sys.stderr)
+        result = api_config.call_vision_api(str(p), config=CONFIG)
+        return f"✅ 图片: {p.name}\n\n📋 识别结果：\n\n{result}"
+
+    except ImportError:
+        return "❌ 需要 tkinter 支持（Windows Python 自带）"
+    except Exception as e:
+        return f"❌ 出错: {str(e)}"
 
 
 if __name__ == "__main__":
