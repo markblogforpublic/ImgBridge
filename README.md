@@ -1,4 +1,4 @@
-# 🖼️ Image Recognizer / 图片识别工具 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 🖼️ Image Recognizer / 图片识别工具 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 A local image recognition tool that uses visual AI models (via API) to analyze images. Upload images through a web interface, get AI-powered descriptions, OCR, and scene analysis.
 
@@ -252,7 +252,7 @@ Place `SKILL.md` in your project's `.claude/skills/` directory to use the `/imag
 
 ## License / 许可证 
 
-MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Disclaimer / 免责声明
 This software is provided "as is", without warranty of any kind, express or implied. The authors assume no responsibility for any damages or losses arising from the use of this software.
