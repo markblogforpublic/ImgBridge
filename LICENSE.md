@@ -1,35 +1,37 @@
-MIT License
+Apache 许可证 2.0 版，2004 年 1 月 http://www.apache.org/licenses/
 
-Copyright (c) 2026 markblogforpublic
+使用、复制和分发条款及条件
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+定义
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+“许可”是指本文件第 1 至 9 条所定义的关于使用、复制和分发的条款及条件。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN A ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+“许可方”是指版权所有者或经版权所有者授权授予本许可的实体。
 
----
+“法人实体”是指运营实体及其所有控制该实体、受该实体控制或与该实体受共同控制的其他实体的集合。就本定义而言，“控制”是指：(i) 直接或间接拥有对该实体进行方向或管理的权力，无论通过合同或其他方式；(ii) 拥有百分之五十 (50%) 或以上的已发行股份；或 (iii) 对该实体拥有实益所有权。
 
-## 变更说明
+“您”（或“您的”）指行使本许可授予权限的个人或法人实体。
 
-MIT License
+“源代码”形式指进行修改的首选形式，包括但不限于软件源代码、文档源代码和配置文件。
 
-版权所有 (c) 2026 markblogforpublic
+“目标形式”指通过对源代码形式进行机械转换或翻译而产生的任何形式，包括但不限于编译后的目标代码、生成的文档以及转换为其他媒体类型的文件。
 
-特此授权，任何获得本软件及相关文档文件（以下简称"软件"）副本的人均可免费处理本软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或出售软件副本的权利，并允许获得软件的人这样做，但须遵守以下条件：
+“作品”指根据本许可提供的任何原创作品，无论其形式为源代码还是目标形式，并由作品中包含或附加的版权声明予以明确（示例见下文附录）。
 
-上述版权声明和本许可声明应包含在本软件的所有副本或实质部分中。
+“衍生作品”指任何基于（或衍生自）作品的作品，无论其形式为源代码还是目标形式，且其编辑修订、注释、阐述或其他修改整体上构成原创作品。就本许可而言，“衍生作​​品”不包括与作品及其衍生作品保持分离状态或仅链接（或按名称绑定）于作品及其衍生作品接口的作品。
 
-本软件按"原样"提供，不提供任何形式的明示或默示担保，包括但不限于对适销性、特定用途适用性和非侵权性的担保。在任何情况下，作者或版权持有人均不对因本软件或本软件的使用或其他交易而引起的任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权行为或其他方面。
+“贡献”是指任何作者作品，包括作品的原始版本以及对该作品或其衍生作品的任何修改或补充，该作品由版权所有者或经版权所有者授权代表其提交的个人或法人实体有意提交给许可方，以便纳入作品中。就本定义而言，“提交”是指发送给许可方或其代表的任何形式的电子、口头或书面通信，包括但不限于在许可方或其代表管理的电子邮件列表、源代码控制系统和问题跟踪系统上进行的通信，目的是讨论和改进作品，但不包括版权所有者以书面形式明确标记或以其他方式指定为“非贡献”的通信。
+
+“贡献者”指许可方以及许可方已收到并随后纳入作品的任何个人或法人实体。
+
+版权许可授予。根据本许可的条款和条件，每位贡献者特此授予您一项永久性、全球性、非独占性、免费、免版税且不可撤销的版权许可，允许您以源代码或目标代码的形式复制、制作衍生作品、公开展示、公开表演、再许可和分发作品及此类衍生作品。
+
+专利许可授予。根据本许可的条款和条件，每位贡献者特此授予您一项永久的、全球范围的、非独占的、免费的、免版税的、不可撤销的（除非本节另有规定）专利许可，允许您制造、委托制造、使用、要约出售、出售、进口以及以其他方式转让作品。该许可仅适用于该贡献者可许可的、且因其贡献单独或与其提交作品结合而必然侵犯的专利权利要求。如果您对任何实体提起专利诉讼（包括在诉讼中提出交叉诉讼或反诉），指控作品或作品中包含的贡献构成直接或间接的专利侵权，则根据本许可授予您的任何针对该作品的专利许可均应自该诉讼提起之日起终止。
+
+再分发。您可以以任何媒介复制和分发作品或其衍生作品的副本，无论是否进行修改，也无论采用源代码形式还是目标形式，但前提是您必须满足以下条件：
+
+(a) 您必须向作品或其衍生作品的任何其他接收者提供本许可的副本；并且
+
+(b) 您必须确保任何修改后的文件都带有显著的声明，表明您已更改这些文件；并且
+
+(c) 在您分发的任何衍生作品的源代码形式中，您必须保留所有版权、专利权、商标权、知识产权和知识产权。
